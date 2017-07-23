@@ -4,7 +4,7 @@ block title
     | Love story
 
 block content
-    .gallery
+    .gallery.container
         .gallery-item
             img(src="./static/img/content/gallery1.png")
             .gallery-item__info
@@ -93,76 +93,68 @@ block content
     .container
         .content.content_padding
             h3 фотографии свадеб
-            .block-tab.clearfix
-                .tabs
-                    input(type="radio" id="tab_1" name="tab" checked="checked" data-tab="tab_1").tabs__input
-                    input(type="radio" id="tab_2" name="tab" data-tab="tab_2").tabs__input
-                    input(type="radio" id="tab_3" name="tab" data-tab="tab_3").tabs__input
-                    input(type="radio" id="tab_4" name="tab" data-tab="tab_4").tabs__input
-                    .tabs__title
-                        .tabs__inner
-                            label(for='tab_1').tabs__label Рубиновая роскошь
-                            label(for='tab_2').tabs__label Прогулка в облаках
-                            label(for='tab_3').tabs__label Природа любви
-                            label(for='tab_4').tabs__label Прованс в моем сердце
 
-                    .tabs_cont
-                        #tab_c1(data-tab="tab_1")
-                            .slide.js-slider
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                        #tab_c2(data-tab="tab_2")
-                            .slide.js-slider
-                                .slide-item
-                                    img(src="./static/img/content/slide_2.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_2.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_2.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_2.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_2.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_2.png")
-                        #tab_c3(data-tab="tab_3")
-                            .slide.js-slider
-                                .slide-item
-                                    img(src="./static/img/content/slide_3.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_3.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_3.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_3.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_3.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_3.png")
-                        #tab_c4(data-tab="tab_4")
-                            .slide.js-slider
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
-                                .slide-item
-                                    img(src="./static/img/content/slide_1.png")
+            .gallery-group
+                .gallery-group__tabs
+                    .gallery-group__tabs-inner
+                        .gallery-group__tab-item(data-filter="all") Все
+                        .gallery-group__tab-item(data-filter="group_1") Рубиновая роскошь
+                        .gallery-group__tab-item(data-filter="group_2") Прогулка в облаках
+                        .gallery-group__tab-item(data-filter="group_3") Природа любви
+                        .gallery-group__tab-item(data-filter="group_4") Прованс в моем сердце
+
+
+                .slide.js-slider
+                    .slide-item(data-group="group_1")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_1")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_1")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_1")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_1")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_1")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_2")
+                        img(src="./static/img/content/slide_2.png")
+                    .slide-item(data-group="group_2")
+                        img(src="./static/img/content/slide_2.png")
+                    .slide-item(data-group="group_2")
+                        img(src="./static/img/content/slide_2.png")
+                    .slide-item(data-group="group_2")
+                        img(src="./static/img/content/slide_2.png")
+                    .slide-item(data-group="group_2")
+                        img(src="./static/img/content/slide_2.png")
+                    .slide-item(data-group="group_2")
+                        img(src="./static/img/content/slide_2.png")
+                    .slide-item(data-group="group_3")
+                        img(src="./static/img/content/slide_3.png")
+                    .slide-item(data-group="group_3")
+                        img(src="./static/img/content/slide_3.png")
+                    .slide-item(data-group="group_3")
+                        img(src="./static/img/content/slide_3.png")
+                    .slide-item(data-group="group_3")
+                        img(src="./static/img/content/slide_3.png")
+                    .slide-item(data-group="group_3")
+                        img(src="./static/img/content/slide_3.png")
+                    .slide-item(data-group="group_3")
+                        img(src="./static/img/content/slide_3.png")
+
+                    .slide-item(data-group="group_4")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_4")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_4")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_4")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_4")
+                        img(src="./static/img/content/slide_1.png")
+                    .slide-item(data-group="group_4")
+                        img(src="./static/img/content/slide_1.png")
+
 
     .about
         .about-info.about-info_padding

@@ -73,6 +73,7 @@
   form
     display flex
     justify-content space-between
+    //align-items flex-start
   &__title
     position absolute
     max-width 430px
@@ -109,8 +110,7 @@
   input
     border 1px solid red
 
-.form-callback .error
-  margin-bottom 15px
+
 
 
 .advantages
@@ -245,79 +245,33 @@
 
 
 
+.gallery-group
+  padding 15px 30px
 
-
-
-
-
-
-.block-tab
-  padding 20px 50px
-  overflow hidden
-
-.tabs
-  position: relative
-  margin: 0 auto
-  width: 100%
-
-  &__title
+.gallery-group__tabs
     overflow-x auto
     overflow-y hidden
+.gallery-group__tabs-inner
+  width 728px
+  display flex
+  justify-content space-between
+  margin auto
 
-  &__inner
-    width 728px
-    display flex
-    justify-content space-between
-    margin auto
-
-  &__label
+.gallery-group__tab-item
     color #808080
     border-bottom 1px solid
     cursor: pointer
-    position: relative
-    top: 0px
     text-align: center
     font-size 13px
     text-transform uppercase
+    margin  20px 0
 
-  &__input
-    position: absolute
-    left: -9999px
-
-
-#tab_1:checked ~ .tabs__title .tabs__label[for="tab_1"],
-#tab_2:checked ~ .tabs__title .tabs__label[for="tab_2"],
-#tab_3:checked ~ .tabs__title .tabs__label[for="tab_3"],
-#tab_4:checked ~ .tabs__title .tabs__label[for="tab_4"]{
-  top 0
-  z-index: 3;
+.active
   color mainColor
   border none
-}
 
-.tabs_cont {
-  position: relative;
-  z-index: 2;
-  margin-top 42px
-}
 
-.tabs_cont > div {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  opacity: 0;
-  -moz-transition: opacity .5s ease-in-out;
-  -webkit-transition: opacity .5s ease-in-out;
-  transition: opacity .5s ease-in-out;
-}
-#tab_1:checked ~ .tabs_cont #tab_c1,
-#tab_2:checked ~ .tabs_cont #tab_c2,
-#tab_3:checked ~ .tabs_cont #tab_c3,
-#tab_4:checked ~ .tabs_cont #tab_c4 {
-  position: static;
-  left: 0;
-  opacity: 1;
-}
+
 
 .block__subtitle
   font-size 17px
@@ -325,11 +279,11 @@
   display block
   margin-top 10px
 
-.tabs_cont
-  margin: 30px auto;
+
 
 .slide
-  padding 0 20px
+  padding 20px
+  margin-top 15px
   display flex
   justify-content space-between
 
