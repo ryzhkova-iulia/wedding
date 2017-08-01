@@ -8693,6 +8693,14 @@ header {
   display: block;
   margin-top: 5px;
 }
+.gallery-item__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.39);
+}
 .btn {
   color: #fff;
   font-size: 0.8rem;
@@ -9043,10 +9051,11 @@ header {
   width: 100%;
   max-width: 370px;
   margin: 0 15px;
+  text-align: center;
 }
 .slide-item img {
   display: inline-block;
-  width: 100%;
+  max-width: 376px;
 }
 .slide .slick-prev,
 .slide .slick-next {
