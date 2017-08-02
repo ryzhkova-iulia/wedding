@@ -9052,10 +9052,11 @@ header {
   max-width: 370px;
   margin: 0 15px;
   text-align: center;
+  overflow: hidden;
 }
 .slide-item img {
   display: inline-block;
-  max-width: 376px;
+  max-width: 370px;
 }
 .slide .slick-prev,
 .slide .slick-next {
