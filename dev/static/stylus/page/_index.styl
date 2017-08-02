@@ -300,13 +300,22 @@
   max-width 370px
   margin 0 15px
   text-align center
-  overflow hidden
   img
     display inline-block
-    //width 100%
+    width 100%
     max-width 370px
+    //max-width 100%
+  //&_gal1
+  //  background url("../img/content/rubin-wedding/rubin-1.jpeg") no-repeat center
+  //  background-size contain
+
+.width_initial img
+  width initial
 
 .slide
+  .slick-track
+    display flex
+    align-items center
   .slick-prev, .slick-next
     width 21px
     height 38px
