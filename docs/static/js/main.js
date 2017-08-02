@@ -80,4 +80,14 @@ $(function () {
             $slider.slick("slickFilter", "[data-group='" + $target.data("filter") + "']");
         }
     }).first().trigger("click");
+
+
+    $('.js-works a').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-mobile',
+        image: {
+            verticalFit: true
+        }
+    });
 });
