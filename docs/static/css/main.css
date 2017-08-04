@@ -8475,6 +8475,13 @@ img.mfp-img {
     color: black;
 }
 
+-webkit-tap-highlight-color rgba(0,
+0,
+0),
+-webkit-tap-highlight-color transparent,
+* {
+  outline: none;
+}
 html {
   line-height: 1;
   font-size: 16px;
