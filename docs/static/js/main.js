@@ -40,8 +40,34 @@ $(function () {
 
     $('.js-popup-form').magnificPopup({
         type: "inline",
-        midClick: true
+        midClick: true,
+        callbacks: {
+            open: initSliders
+        }
+
     });
+
+    function initSliders() {
+            $(".js-form-slider1, .js-form-slider2, .js-form-slider3, .js-form-slider4").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 550,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }
+                ]
+        })
+    };
 
 
 
@@ -68,6 +94,8 @@ $(function () {
             }
         ]
     });
+
+
     $(".gallery-group__tab-item").on("click", function () {
         $(".gallery-group__tab-item").removeClass("active");
 
@@ -107,5 +135,7 @@ $(function () {
 
         }
     });
+
+
 
 });

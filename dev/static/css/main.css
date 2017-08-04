@@ -8671,7 +8671,7 @@ header {
   right: 5%;
   color: #fff;
   bottom: 20px;
-  background-color: rgba(0,0,0,0.36);
+  background-color: rgba(0,0,0,0.45);
   padding: 10px;
 }
 .gallery-item__info_align-left {
@@ -9215,6 +9215,53 @@ header {
 }
 .mfp-counter {
   display: none;
+}
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: pointer;
+}
+.form-slider {
+  display: block;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+.form-slider__item {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+}
+.form-slider__item img {
+  width: 100%;
+}
+.form-slider .slick-slide img {
+  display: inline-block;
+}
+.form-slider .slick-prev,
+.form-slider .slick-next {
+  width: 21px;
+  height: 38px;
+}
+.form-slider .slick-next {
+  right: -10px;
+}
+.form-slider .slick-prev {
+  left: -10px;
+}
+.form-slider .slick-prev:before {
+  content: '';
+  background: url("../img/content/arrow-left.png") no-repeat center;
+  width: 21px;
+  height: 38px;
+  display: block;
+}
+.form-slider .slick-next:before {
+  content: '';
+  background: url("../img/content/arrow-right.png") no-repeat center;
+  width: 21px;
+  height: 38px;
+  display: block;
 }
 @media screen and (max-width: 992px) {
   .address {
