@@ -82,12 +82,30 @@ $(function () {
     }).first().trigger("click");
 
 
-    $('.js-works a').magnificPopup({
+    // $('.js-works a').magnificPopup({
+    //     type: 'image',
+    //     closeOnContentClick: true,
+    //     mainClass: 'mfp-img-mobile',
+    //     image: {
+    //         verticalFit: true
+    //     }
+    // });
+
+
+    $('.js-popup-gallery').magnificPopup({
+        delegate: 'a',
         type: 'image',
-        closeOnContentClick: true,
+        tLoading: 'Loading image #%curr%...',
         mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
         image: {
-            verticalFit: true
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+
         }
     });
+
 });
