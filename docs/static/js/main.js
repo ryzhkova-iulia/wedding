@@ -42,32 +42,32 @@ $(function () {
         type: "inline",
         midClick: true,
         callbacks: {
-            open: initSliders
+            open: function () {
+                var $slider = this.container.find(".js-form-slider");
+                if (!$slider.hasClass("slick-initialized")) {
+                    $slider.slick({
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        responsive: [
+                            {
+                                breakpoint: 550,
+                                settings: {
+                                    slidesToShow: 1
+                                }
+                            },
+                            {
+                                breakpoint: 1200,
+                                settings: {
+                                    slidesToShow: 2
+                                }
+                            }
+                        ]
+                    });
+                }
+            }
         }
-
     });
-
-    function initSliders() {
-            $(".js-form-slider1, .js-form-slider2, .js-form-slider3, .js-form-slider4").slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-                responsive: [
-                    {
-                        breakpoint: 550,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    },
-                    {
-                        breakpoint: 1200,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    }
-                ]
-        })
-    };
 
 
 
