@@ -9380,4 +9380,10 @@ header {
   .gallery-group {
     padding: 15px;
   }
+  .logo span {
+    width: 100%;
+    max-width: 170px;
+    margin: auto;
+    font-size: 0.7rem;
+  }
 }
